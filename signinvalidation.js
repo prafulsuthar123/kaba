@@ -1,3 +1,21 @@
+// js for menu slider
+
+function openBar()
+{
+    document.getElementById('nav').style.transform = "translate(00vw)"
+    document.getElementById('open-btn').style.display='none'
+    document.getElementById('close-btn').style.display='block'
+
+}
+function closeBar()
+{
+    document.getElementById('nav').style.transform = "translate(-100vw)"
+    document.getElementById('open-btn').style.display='block'
+    document.getElementById('close-btn').style.display='none'
+
+}
+
+
 // signin signup slider
 
 const main_box = document.querySelector('.main_box');
@@ -67,7 +85,7 @@ form.addEventListener('submit', (event) =>{
 
 
 const spaceValidation = () =>{
-    if(name.value == '')
+    if(nam.value == '')
     {
         document.getElementById('nametext').innerHTML='Username cannot be blank !'
         document.querySelector('#namefc').className = 'form-control error'
@@ -98,12 +116,12 @@ const spaceValidation = () =>{
 name.addEventListener('keyup', () =>{
     var upattern1=/^[A-Za-z0-9]{3,}$/
     var upattern2=/^(?=.[0-9]){2,}(?=.[a-z]){2,}[A-Za-z0-9]{5,}$/
-    if(upattern2.test(name.value))
+    if(upattern1.test(name.value))
     {
         document.getElementById('nametext').innerHTML= '"' + name.value + '" USERNAME IS AVAILABLE !'
         document.querySelector('#namefc').className = 'form-control success'
     }
-    else if(upattern1.test(name.value))
+    else if(upattern2.test(name.value))
     {
         document.getElementById('nametext').innerHTML= '"' + name.value + '" USERNAME IS NOT AVAILABLE !'
         document.querySelector('#namefc').className = 'form-control error'
@@ -151,9 +169,9 @@ phone.addEventListener('keyup', () =>{
 
 pass.addEventListener('keyup', () =>{
 
-        var weak=/^[A-Za-z0-9!@#$%^&*]{0,}$/
-        var medium=/^(?=.[0-9])(?=.[a-z])[A-Za-z0-9!@#$%^&*]{5,}$/
-        var strong=/^(?=.[A-Z])(?=.[0-9])(?=.[!@#$%^&])[A-Za-z0-9!@#$%^&*]{8,}$/
+        var weak=/([A-Za-z0-9!@#$%^&*]{0,})/
+        var medium=/((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))/
+        var strong=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/
 
         if(strong.test(pass.value))
         {
@@ -233,3 +251,54 @@ const checkit = () =>{
     }
 
 }
+
+// js for timer
+
+var countDownDate = new Date("dec 06, 2023 12:00:00").getTime();
+var x = setInterval(function() {
+    
+    var now = new Date().getTime();
+    var distance = countDownDate - now; 
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+    document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("clock").innerHTML = "LAUNCHED";
+    }
+
+}, 1000);
+
+ // js for testimonials
+
+ const prev = document.getElementById('prev');
+ const next = document.getElementById('next');
+ let slider = document.querySelector('.slider');
+ let slideIndex = 0;
+ 
+ prev.addEventListener('click',() =>{
+     slideIndex = (slideIndex - 1 + 5) % 5;
+     slider.style.transform = 'translate('+ ( slideIndex ) * -20 +'%)';
+     slider.style.animation = 'none';        
+ });
+ 
+ next.addEventListener('click',() =>{
+     slideIndex = (slideIndex + 1) % 5;
+     slider.style.transform = 'translate('+ ( slideIndex ) * -20 +'%)';
+     slider.style.animation = 'none';        
+ 
+ });
+  
+  
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
