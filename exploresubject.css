@@ -13,44 +13,44 @@
     border-radius: 10px;
     height: 200px;
     overflow: hidden;
-    background-image: url(../img/featured/topic1.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/networkes.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.5s;
 }
 .subject:nth-child(2)
 {
-    background-image: url(../img/featured/topic2.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/web.png);
 
 }
 .subject:nth-child(3)
 {
-    background-image: url(../img/featured/topic3.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/prog.jpeg);
 
 }
 .subject:nth-child(4)
 {
-    background-image: url(../img/featured/topic4.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/photo.jpeg);
 
 }
 .subject:nth-child(5)
 {
-    background-image: url(../img/featured/topic5.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/jorn.jpeg);
 
 }
 .subject:nth-child(6)
 {
-    background-image: url(../img/featured/topic6.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/buss.jpeg);
 
 }
 .subject:nth-child(7)
 {
-    background-image: url(../img/featured/topic7.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/net.jpeg);
 
 }
 .subject:nth-child(8)
 {
-    background-image: url(../img/featured/topic9.png);
+    background-image: url(C:/Users/Hello/OneDrive/Desktop/kaba/math.jpeg);
 
 }
 .subject-text
@@ -67,7 +67,7 @@
 {
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 0, 0);
     font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
