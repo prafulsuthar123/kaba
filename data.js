@@ -9,21 +9,21 @@ const firebaseConfig = {
   };
 
   firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
+  const contactDB = firebase.database().ref("form");
 
-  var contactDB = firebase.database().ref("contact");
+  document.getElementById("form").addEventListener("submit", SendForm);
 
-  document.getElementById("contact").addEventListener("submit", send);
-
-  function send(e){
+  function SendForm(e) {
     e.preventDefault();
-    var fn = getElementByVal('fn');
-    var ln = getElementByVal('ln');
-    var email = getElementByVal('email');
-    var country = getElementByVal('fn');
-    var textvalue = getElementByVal('textvalue');
+    var fn = getElementVal("fn");
+    var ln = getElementVal("ln");
+    var email = getElementVal("email");
+    var country = getElementVal("fn");
+    var textvalue = getElementVal("textvalue");
     console.log(fn, ln, email, country, textvalue);
-  } 
+   } 
 
-  const getElementById =(id) =>{
-    return document.getElementById(id).ariaValueMax;
+  const getElementVal = (id) =>{
+    return document.getElementById(id).value;
   };

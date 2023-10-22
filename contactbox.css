@@ -73,7 +73,7 @@ textarea
     padding-top: 8px;
     height: 100px;
 }
-input[type='submit']
+.submit
 {
     background-color: crimson;
     border: 2px solid crimson;
